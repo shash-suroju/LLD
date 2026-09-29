@@ -1,0 +1,49 @@
+1. Users should be able to add expenses in the groups which they belong to & seperately too
+2. Support Exact, Equal split strategies 
+3. Should maintain / show net non zero balances
+4. balances are maintained per group
+5. expenses belong to a group
+
+
+extensibility:
+1. support groups
+2. percentag split
+
+
+Entities:
+User
+- id
+- name
+
+
+Group
+- id
+- name
+- List<User>
+- List<Expense>
+- Map<User, Balance> balances;
+
+
+
+Expense
+- User paidBy
+- group groupId
+- amount
+- List<Users>
+- SplitType
+
+
+
+Balance 
+- User a
+- User b
+- amount
+
+
+Split 
+- User
+- amount
+
+
+
+SplitType -> enum (equal, exact)
