@@ -1,0 +1,41 @@
+Requirements:
+1. User should be able to search for slots he/she wanted
+2. User should be able to select and book those slots
+3. Can provide Recurrence type of the meeting (stand ups)
+
+
+
+Entities:
+1. User
+2. Booking
+3. Room
+4. Slot 
+
+
+User
+- id
+- name
+
+
+Booking
+- id
+- ownerId
+- BookingType (Recurrence, normal)
+- List<User>: participants
+- date
+- startTime
+- endTime
+
+
+Room
+- id
+- name
+- List<Slot> bookedSlots
+
+
+Slot
+- id
+- startDate
+- endDate
+- startTime
+- endTime
